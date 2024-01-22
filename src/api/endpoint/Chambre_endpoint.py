@@ -2,7 +2,7 @@ from fastapi import APIRouter, Depends
 
 from src.core.config.database import get_db
 from src.core.controller import Chambre_controller
-from src.core.schemas.Chambre_schemas import ChambreSchemasBase, ChambreSchemas
+from src.core.schemas.Chambre_schemas import ChambreSchemas, ChambreSchemasBase
 
 router = APIRouter()
 

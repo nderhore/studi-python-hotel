@@ -3,7 +3,7 @@ from starlette import status
 from starlette.responses import JSONResponse
 
 from src.core.model.Chambre import Chambre
-from src.core.schemas.Chambre_schemas import ChambreSchemasBase, ChambreSchemas
+from src.core.schemas.Chambre_schemas import ChambreSchemas, ChambreSchemasBase
 
 
 async def create_chambre(db: Session, chambre: ChambreSchemasBase) -> ChambreSchemas:

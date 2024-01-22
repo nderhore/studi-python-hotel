@@ -18,6 +18,9 @@ Projet effectué dans le cadre d'une série de live Studi, durée de 4 heures da
 ```python
 pip3 install -r ./requirements.txt
 ```
+
+- create env file named '.env' in the root of the project
+  - set value of SECRET_KEY , ALGORITHM and ACCESS_TOKEN_EXPIRE_MINUTES
 - launch app with :
 ```python
 python3 -m uvicorn main:app --reload

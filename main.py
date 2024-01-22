@@ -1,7 +1,9 @@
+from dotenv import load_dotenv
 from fastapi import FastAPI
 
 from src.core.config.database import Base, engine
 
+load_dotenv()
 app = FastAPI()
 
 

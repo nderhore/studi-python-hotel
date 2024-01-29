@@ -1,0 +1,1 @@
+INSERT INTO client (nom,prenom,email,telephone) VALUES ("jose","test","toto@toto.fr","0612548912");

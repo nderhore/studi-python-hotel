@@ -1,5 +1,4 @@
-from sqlalchemy import Integer, Column, ForeignKey, Date, Float
-from sqlalchemy.orm import relationship
+from sqlalchemy import Column, Date, Float, ForeignKey, Integer, PrimaryKeyConstraint
 
 from src.core.config.database import Base
 
@@ -12,5 +11,7 @@ class Reservation(Base):
     date_arrivee = Column(Date)
     date_depart = Column(Date)
     prix_total = Column(Float)
-    client = relationship("Client")
-    chambe = relationship("Chambre")
+
+    __table_args__ = (
+        PrimaryKeyConstraint("reservation_id", "client_id", "chambre_id"),
+    )

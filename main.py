@@ -1,6 +1,7 @@
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from sqlalchemy import text
+from starlette.middleware.cors import CORSMiddleware
 
 from src.api import api
 from src.core.config.database import Base, engine
@@ -55,3 +56,8 @@ def drop_and_create_database():
 @app.on_event("startup")
 async def startup_event():
     drop_and_create_database()
+
+
+app.add_middleware(
+    CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=[""]
+)

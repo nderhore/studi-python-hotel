@@ -8,7 +8,7 @@ router = APIRouter()
 
 
 # creation de chambre
-@router.post(response_model=ChambreSchemas)
+@router.post("/", response_model=ChambreSchemas)
 async def create_chambre(chambre: ChambreSchemasBase, db=Depends(get_db)):
     chambre: ChambreSchemas = await Chambre_controller.create_chambre(db, chambre)
     return chambre
